@@ -1,0 +1,11 @@
+{
+    "id": "vigstudio/vig-giscus",
+    "name": "Vig Giscus",
+    "namespace": "VigStudio\\VigGiscus\\",
+    "provider": "VigStudio\\VigGiscus\\Providers\\VigGiscusServiceProvider",
+    "author": "Nghia Ne",
+    "url": "https://nghiane.com",
+    "version": "0.0.1",
+    "description": "A comments system powered by GitHub Discussions. Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by utterances.",
+    "minimum_core_version": "7.3.0"
+}
