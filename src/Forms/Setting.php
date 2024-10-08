@@ -48,7 +48,7 @@ class Setting extends SettingForm
                     ->content('
                         <script>
                             window.vigrepo="' . route('vig-giscus.settings.repo') . '";
-                            window.vigcategory = "' . setting('vig_giscum_category', null) . '"
+                            window.vigcategory = "' . setting('vig_giscum_category_id', null) . '"
                         </script>
                     ')
             )

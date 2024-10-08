@@ -7,6 +7,7 @@ use Botble\Setting\Http\Controllers\SettingController;
 use Http;
 use Illuminate\Http\Request;
 use VigStudio\VigGiscus\Forms\Setting;
+use VigStudio\VigGiscus\Requests\SettingRequest;
 
 class VigGiscusController extends SettingController
 {
@@ -18,7 +19,7 @@ class VigGiscusController extends SettingController
         return Setting::create()->renderForm();
     }
 
-    public function update(Request $request)
+    public function update(SettingRequest $request)
     {
         return $this->performUpdate($request->all());
     }
