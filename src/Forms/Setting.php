@@ -138,7 +138,7 @@ class Setting extends SettingForm
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
                     ->label('Use strict title matching')
-                    ->value(setting('vig_giscum_strict', 0))
+                    ->value(setting('vig_giscum_strict', false))
             )
             ->add(
                 'vig_giscum_category_id',
@@ -183,7 +183,7 @@ class Setting extends SettingForm
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
                     ->label('Enable reactions for the main post')
-                    ->value(setting('vig_giscum_reactionsEnabled', 1))
+                    ->value(setting('vig_giscum_reactionsEnabled', true))
                     ->helperText('The reactions for the discussion\'s main post will be shown before the comments.')
             )
             ->add(
@@ -191,7 +191,7 @@ class Setting extends SettingForm
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
                     ->label('Emit discussion metadata')
-                    ->value(setting('vig_giscum_emitMetadata', 0))
+                    ->value(setting('vig_giscum_emitMetadata', false))
                     ->helperText('Discussion metadata will be sent periodically to the parent window (the embedding page). For demonstration, enable this option and open your browser\'s console on this page. See <a href="https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage" target="_blank" rel="noreferrer noopener nofollow">the documentation</a> for more details.')
             )
             ->add(
@@ -199,7 +199,7 @@ class Setting extends SettingForm
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
                     ->label('Place the comment box above the comments')
-                    ->value(setting('vig_giscum_inputPosition', 0))
+                    ->value(setting('vig_giscum_inputPosition', false))
                     ->helperText('The comment input box will be placed above the comments, so that users can leave a comment without scrolling to the bottom of the discussion.')
             )
             ->add(
@@ -207,7 +207,7 @@ class Setting extends SettingForm
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
                     ->label('Load the comments lazily')
-                    ->value(setting('vig_giscum_lazyLoad', 1))
+                    ->value(setting('vig_giscum_lazyLoad', true))
                     ->helperText('Loading of the comments will be deferred until the user scrolls near the comments container. This is done by adding loading="lazy" to the iframe element.')
             )
             ->add(

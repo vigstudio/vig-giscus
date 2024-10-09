@@ -14,6 +14,7 @@ class VigGiscusController extends SettingController
     public function edit()
     {
         $this->pageTitle('Vig Gitcus Setting');
+
         Assets::addScriptsDirectly('vendor/core/plugins/vig-giscus/vig-giscum-setting.js');
 
         return Setting::create()->renderForm();
@@ -26,9 +27,8 @@ class VigGiscusController extends SettingController
 
     public function getData(Request $request)
     {
-        $name = $request->name;
-        $data = Http::get('https://giscus.app/api/discussions/categories?repo=' . $name)->json();
+        $data = Http::get('https://giscus.app/api/discussions/categories?repo=' . $request->input('name'))->json();
 
-        return response()->json($data, 200);
+        return response()->json($data);
     }
 }
